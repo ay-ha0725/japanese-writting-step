@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiraganaひらがな</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: #d63384;
+        }
+        .menu ul{
+			background-color:rgb(255, 96, 194);
+			width:560px;
+margin: 0 auto;
+			border-radius:10px;
+		}
+		.menu li{
+      list-style-image:none;
+margin: 17px;
+margin-left:0px;
+width: 480px;
+      text-align: center;
+			list-style: none;
+		}
+		.active{
+			font-size: 20px;
+			color: #ffeffd !important;
+		}
+    
+        * {
+  box-sizing: border-box;
+}
+
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+        
+
+.down {
+  border: 1px solid rgb(255, 255, 255);
+  width:560px;
+margin: 0 auto;
+			border-radius:10px;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+p {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.pagination  {
+  width:560px;
+margin: 0 auto;
+}
+
+.pagination a {
+  color: rgb(255, 255, 255);
+  display: ruby-base-container;
+  margin: 10%;
+  letter-spacing: 3px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border-radius:10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.pagination a:hover:not(.active) {background-color: rgb(216, 216, 216);}
+
+footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(255, 96, 194);
+            height: auto;
+            width: 500;
+            font-family: "open Sans";
+            padding-top: 15px;
+            color: #fff
+        }
+
+        .footer-bottom{
+            text-align: center;
+        }
+
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span{
+            text-transform: uppercase;
+            color: black;
+        }
+
+@media only screen and (min-width: 48.75cm) {
+  .container {width: 43.75%;}
+  img {width: 43.75%;}
+}
+      </style>
+    </head>
+    <body>
+      <div class="container">
+        <div class="menu">
+            <ul>
+            <li class="active"><a class="btn btn-primary" href="../home.html">
+                <strong>home</strong></a></li>
+            <li style="background-color:#20d5db;color:rgb(255, 207, 740);border-radius:5px;">
+              <a class="btn btn-primary" href="../hira.html">
+              ひらがな</a></li>
+            <li style="background-color:#20db9d;color:rgb(255, 207, 740);border-radius:5px;">
+              <a class="btn btn-primary" href="../kata.html">カタカナ</a></li>
+            <li style="background-color:#F7CB1B;color:rgb(255, 207, 740);border-radius:5px;">
+              <a class="btn btn-primary" href="../pra.html">practice</a></li>
+          </ul>
+        </div>
+        
+        <center><img src="hira2/11sa.png" width="560px" height="330px"></center>
+        
+          <div class="pagination" >
+            <p>click for Next/Previous alphabet</p>
+            <a href="10.html" align="center">❮PREVIOUS</a>
+            <a href="12.html" align="center">NEXT❯</a>
+          </div>
+      
+      <br>
+        <div class="down">
+          <h1>Click menu text </h1>
+          <p>to change to other page</p>
+        </div>
+        <br>
+        <footer>
+          <div class="footer-bottom">
+            <p>Copyright © 2022 <span>Ribbin-Wiya & 仔仔-Kritta</span> 
+              <br>All rights reserved </p>
+          </div>
+        </footer>
+
+    </body>
+    </html>

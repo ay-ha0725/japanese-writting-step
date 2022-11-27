@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+<style>
+	body {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif;
+  		background-image: url('sasa.png');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+			.menu ul{
+			background-color:rgb(255, 96, 194);
+			display: inline-flex ;
+			margin: 0px;
+			border-radius:5px;
+		}
+		.menu ul li{
+			width: 90px;
+			margin: 15px;
+            text-align: center;
+			list-style: none;
+		}
+		.active{
+			font-size: 20px;
+			color: #ffeffd !important;
+		}
+
+        .card{width: 18rem; 
+            margin: 20px;
+        }
+
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+
+		.img{
+			width: 650px;
+			height: 890px;
+			float: left;
+			max-width: 100%;
+		}
+		.card2{
+			border: 3px soild black;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 10px
+		}
+		.card2{
+			width: 300px;
+			height: 500px;
+			background-color: #20db9d;
+			color: #363636;
+			text-align: center;
+			list-style-type: none;
+			display: inline-block;
+		}
+		.card3{
+			border: 3px soild black;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 10px
+		}
+		.card3{
+			width: 300px;
+			height: 500px;
+			background-color: #20d5db;
+			color: #363636;
+			text-align: center;
+			list-style-type: none;
+			display: inline-block;
+		}
+		.practict{
+			border: 3px soild black;
+			padding: 10px;
+			margin: 10px;
+			border-radius: 10px
+		}
+		.practict{
+			width: 300px;
+			height: 500px;
+			background-color: #dbb920;
+			color: #363636;
+			text-align: center;
+			list-style-type: none;
+			display: inline-block;
+		}
+
+		@media screen and (min-width: 48.75cm) {
+			.container {width: 7.03125%;}
+			.card2 .card3 {
+				width: 23.4375%;
+			}
+			.practict {
+				width: 23.4375%;
+			}
+			.title {
+          color: grey;
+          font-size: 18px;
+        }
+		}
+
+		footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(255, 96, 194);
+            height: 70px;
+            width: 200;
+            font-family: "open Sans";
+            padding-top: 15px;
+            color: #fff;
+        }
+
+        .footer-bottom{
+            text-align: center;
+        }
+
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span{
+            text-transform: uppercase;
+            color: black;
+        }
+
+</style> 
+</head>
+<body>
+<div class="container">
+    <div class="menu">
+        <ul>
+				<li class="active"><strong>home</strong></li>
+				<li style="background-color:#20d5db;color:rgb(255, 207, 740);border-radius:5px;">
+					<a class="btn btn-primary" href="hira.html">
+					ひらがな</a></li>
+				<li style="background-color:#20db9d;color:rgb(255, 207, 740);border-radius:5px;">
+					<a class="btn btn-primary" href="kata.html">カタカナ</a></li>
+				<li style="background-color:#F7CB1B;color:rgb(255, 207, 740);border-radius:5px;">
+					<a class="btn btn-primary" href="pra.html">practice</a></li>
+			</ul>
+    </div>
+	<br>
+		<img src="yoko.png" align="left">
+<ul>
+	<li class="card2">
+	<div><strong>カタカナ</strong></div>
+	<img src="kata.png" width="248px" height="253">
+	<div class="detail">カタカナは外国語からの単語や言葉を書くのに使われます。<br>
+		例えば果物の名前「バナナ」
+		<br><pre>Katakana  is use to write words or vocabulary
+from foreign language.</pre>
+<br>
+		<strong>click me to see more</strong>
+		<br>
+		<a class="btn btn-primary" href="kata.html">
+			<button style="background-color:#dbb92e;color:black;border-radius:5px;block-size: 30px;cursor: pointer;">click me</button>
+		</a>
+	</div>
+	</li>
+</ul>
+<ul>
+	<li class="card3">
+	<div><strong>ひらがな</strong></div>
+	<img src="hira.png" width="248px" height="253">
+	<div class="detail">ひらがなは日本の創造から生まれた<br>言葉を書くのに使われます。
+		<br>例えば日本の名前など使います。
+		<pre>Hiragana is use to write words born from
+the creation of Japan.Such as Japanese name.</pre>
+<br>
+		<strong>click me to see more</strong>
+		<br>
+		<a class="btn btn-primary" href="hira.html">
+			<button style="background-color:#F7CB1B;color:black;border-radius:5px;block-size: 30px;cursor: pointer;">click me</button>
+		</a>
+	</div>
+	</li>
+</ul>
+<ul>
+	<li class="practict">
+	<div><strong>practice</strong></div>
+	<img src="pra.png" width="248px" height="253">
+	<div class="detail">これは日本語の文字の練習です。
+		<br>ひらがな練習とカタカナの練習が<br>あります。
+<br><pre>This is a Japanese alphabet practice.
+We have Hiragana practice and Katakana practice.</pre>
+			<br>
+		<strong>click me to see more</strong>
+		<br>
+		<a class="btn btn-primary" href="pra.html" float="center">
+			<button style="background-color:#F7CB1B;color:black;border-radius:5px;block-size: 30px;cursor: pointer;">click me</button>
+		</a>
+	</div>
+	</li>
+	<footer>
+		<div class="footer-bottom">
+			<p>Copyright © 2022 <span>Ribbin-Wiya & 仔仔-Kritta</span> 
+				<br>All rights reserved </p>
+		</div>
+	</footer>
+</ul>
+
+</body>
+</html>

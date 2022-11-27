@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カタカナkatakana</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+              background-image: url('room.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .menu ul{
+			background-color:rgb(255, 96, 194);
+			display: inline-flex ;
+			margin: 0px;
+			border-radius:5px;
+		}
+		.menu ul li{
+      width: 90px;
+			margin: 15px;
+      text-align: center;
+			list-style: none;
+		}
+		.active{
+			font-size: 20px;
+			color: #ffeffd !important;
+		}
+        .danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+        .card{width: 18rem; 
+            margin: 20px;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.columns {
+  width: 500px;
+  padding: 18px;
+  margin: auto;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #6610f2;
+  color: white;
+  font-size: 30px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.click {
+   color: white;
+}
+
+/* a */
+.card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          display: inline-block;
+          text-align: center;
+          font-family: arial;
+        }
+        /* i */
+        .card2 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        /* u */
+        .card3 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+         /* e */
+         .card4 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* o */
+        .card5 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ka */
+        .card6 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ki */
+        .card7 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        /* ku */
+        .card8 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        
+        /* ke */
+        .card9 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ko */
+        .card10 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        
+        /* sa */
+        .card11 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* shi */
+        .card12 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* su */
+        .card13 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* se */
+        .card14 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* so */
+        .card15 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ta */
+        .card16 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* chi */
+        .card17 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* tsu */
+        .card18 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* te */
+        .card19 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* to */
+        .card20 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* na */
+        .card21 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ni */
+        .card22 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* nu */
+        .card23 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ne */
+        .card24 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* no */
+        .card25 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ha */
+        .card26 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* hi */
+        .card27 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* hu */
+        .card28 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* he */
+        .card29 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ho */
+        .card30 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ma */
+        .card31 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mi */
+        .card32 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mu */
+        .card33 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* me */
+        .card34 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mo */
+        .card35 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ya */
+        .card36 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* yu */
+        .card37 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* yo */
+        .card38 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        } 
+        
+        /* ra */
+        .card39 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ri */
+        .card40 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ru */
+        .card41 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* re */
+        .card42 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ro */
+        .card43 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* wa */
+        .card44 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* wo */
+        .card45 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* n */
+        .card46 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+        
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+
+        footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(255, 96, 194);
+            height: 70px;
+            width: 500;
+            font-family: "open Sans";
+            padding-top: 15px;
+            color: #fff
+        }
+
+        .footer-bottom{
+            text-align: center;
+        }
+
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span{
+            text-transform: uppercase;
+            color: black;
+        }
+
+@media only screen and (min-width: 48.75cm) {
+  .columns {width: 39.0625%;}
+  .container {width: 7.03125%}
+  .card .card2 .card3 .card4 .card5 .card6 .card7 .card8 .card9 .card10 .card11 .card12 .card13 .card14 .card15
+  .card16 .card17 .card18 .card19 .card20 .card21 .card22 .card23 .card24 .card25 .card26 .card27 .card28 .card29 
+  .card30 .card31 .card32 .card33 .card34 .card35 .card36 .card37 .card38 .card39 .card40 .card41 .card42 .card43
+  .card44 .card45 .card46
+  {width: 17.1875%;}
+}
+    </style> 
+</head>
+<body>
+    <div class="columns">
+        <ul class="price">
+          <li class="header">カタカナ</li>
+          <li class="grey"><strong>katakanaカタカナ</strong> have 46 alphabet</li>
+          <li class="click">click at <strong>"CLICK ME"</strong> to look step to write each alphabet</li>
+        </ul>
+      </div>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                    <li class="active" style="background-color:#ffffff;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="home.html"><strong>home</strong></a></li>
+                    <li style="background-color:#0dcaf0;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="hira.html">
+                        ひらがな</a></li>
+                    <li style="background-color:#20db9d;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="kata.html">カタカナ</a></li>
+                    <li style="background-color:#F7CB1B;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="pra.html">practice</a></li>
+                </ul>
+        </div>
+    </div>
+      <br>
+      <!-- a -->
+                <div class="card">
+                  <img src="kata/1a.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/1.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- i -->          
+                <div class="card2">
+                  <img src="kata/2i.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/2.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- u -->          
+                <div class="card3">
+                  <img src="kata/3u.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/3.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- e -->        
+                <div class="card4">
+                  <img src="kata/4e.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/4.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- o -->      
+                <div class="card5">
+                  <img src="kata/5o.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/5.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ka -->     
+                <div class="card6">
+                  <img src="kata/6ka.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/6.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ki -->
+                <div class="card7">
+                  <img src="kata/7ki.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/7.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ku -->
+                <div class="card8">
+                  <img src="kata/8ku.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/8.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ke -->
+                <div class="card9">
+                  <img src="kata/9ke.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/9.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ko -->
+                <div class="card10">
+                  <img src="kata/10ko.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/10.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- sa -->
+                <div class="card11">
+                  <img src="kata/11sa.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/11.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- shi -->
+                <div class="card12">
+                  <img src="kata/12shi.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/12.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- su -->
+                <div class="card13">
+                  <img src="kata/13su.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/13.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- se -->
+                <div class="card14">
+                  <img src="kata/14se.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="kataw/14.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: rgb(0, 0, 0);
+                    background-color: #20c997;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- so -->
+      <div class="card15">
+        <img src="kata/15so.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/15.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+       <!-- ta -->
+       <div class="card16">
+        <img src="kata/16ta.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/16.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- chi -->
+      <div class="card17">
+        <img src="kata/17chi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/17.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- tsu -->
+      <div class="card18">
+        <img src="kata/18tsu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/18.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- te -->
+      <div class="card19">
+        <img src="kata/19te.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/19.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- to -->
+      <div class="card20">
+        <img src="kata/20to.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/20.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- na -->
+      <div class="card21">
+        <img src="kata/21na.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/21.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ni -->     
+      <div class="card22">
+        <img src="kata/22ni.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/22.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- nu -->
+      <div class="card23">
+        <img src="kata/23nu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/23.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- ne -->
+      <div class="card24">
+        <img src="kata/24ne.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/24.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- no -->
+      <div class="card25">
+        <img src="kata/25no.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/25.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ha -->
+      <div class="card26">
+        <img src="kata/26ha.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/26.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- hi -->
+      <div class="card27">
+        <img src="kata/27hi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/27.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- hu -->
+      <div class="card28">
+        <img src="kata/28hu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/28.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- he -->
+      <div class="card29">
+        <img src="kata/29he.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/29.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ho -->
+      <div class="card30">
+        <img src="kata/30ho.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/30.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ma -->
+      <div class="card31">
+        <img src="kata/31ma.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/31.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- mi -->     
+      <div class="card32">
+        <img src="kata/32mi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/32.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- mu -->
+      <div class="card33">
+        <img src="kata/33mu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/33.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- me -->
+      <div class="card34">
+        <img src="kata/34me.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/34.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- mo -->
+      <div class="card35">
+        <img src="kata/35mo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/35.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ya -->
+      <div class="card36">
+        <img src="kata/36ya.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/36.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- yu -->
+      <div class="card37">
+        <img src="kata/37yu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/37.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- yo -->
+      <div class="card38">
+        <img src="kata/38yo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/38.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<br>
+      <!-- ra -->
+      <div class="card39">
+        <img src="kata/39ra.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/39.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ri -->
+      <div class="card40">
+        <img src="kata/40ri.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/40.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ru -->
+      <div class="card41">
+        <img src="kata/41ru.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/41.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- re -->     
+      <div class="card42">
+        <img src="kata/42re.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/42.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- ro -->
+      <div class="card43">
+        <img src="kata/43ro.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/43.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<br>
+      <!-- wa -->
+      <div class="card44">
+        <img src="kata/44wa.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/44.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- wo -->
+      <div class="card45">
+        <img src="kata/45wo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/45.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- n -->
+      <div class="card46">
+        <img src="kata/46n.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="kataw/46.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: rgb(0, 0, 0);
+          background-color: #20c997;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <footer>
+        <div class="footer-bottom">
+            <p>Copyright © 2022 <span>Ribbin-Wiya & 仔仔-Kritta</span> All rights reserved </p>
+        </div>
+    </footer>
+
+</body>
+</html>

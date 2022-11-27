@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hiraganaひらがな</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+              background-image: url('glass.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+        .menu ul{
+			background-color:rgb(255, 96, 194);
+			display: inline-flex ;
+			margin: 0px;
+			border-radius:5px;
+		}
+		.menu ul li{
+      width: 90px;
+			margin: 15px;
+      text-align: center;
+			list-style: none;
+		}
+		.active{
+			font-size: 20px;
+			color: #ffeffd !important;
+		}
+        .danger {
+  background-color: #ffdddd;
+  border-left: 6px solid #f44336;
+}
+        .card{width: 18rem; 
+            margin: 20px;
+        }
+        * {
+  box-sizing: border-box;
+}
+
+.columns {
+  width: 500px;
+  padding: 18px;
+  margin: auto;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #dc3545;
+  color: white;
+  font-size: 30px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 15px;
+  text-align: center;
+  font-size: 22px;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+/* a */
+.card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          display: inline-block;
+          text-align: center;
+          font-family: arial;
+        }
+        /* i */
+        .card2 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        /* u */
+        .card3 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+         /* e */
+         .card4 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* o */
+        .card5 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ka */
+        .card6 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ki */
+        .card7 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        /* ku */
+        .card8 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        
+        /* ke */
+        .card9 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ko */
+        .card10 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        
+        /* sa */
+        .card11 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* shi */
+        .card12 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* su */
+        .card13 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* se */
+        .card14 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* so */
+        .card15 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ta */
+        .card16 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* chi */
+        .card17 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* tsu */
+        .card18 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* te */
+        .card19 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* to */
+        .card20 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* na */
+        .card21 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ni */
+        .card22 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* nu */
+        .card23 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ne */
+        .card24 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* no */
+        .card25 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ha */
+        .card26 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* hi */
+        .card27 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* hu */
+        .card28 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* he */
+        .card29 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ho */
+        .card30 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ma */
+        .card31 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mi */
+        .card32 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mu */
+        .card33 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* me */
+        .card34 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* mo */
+        .card35 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ya */
+        .card36 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* yu */
+        .card37 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* yo */
+        .card38 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        } 
+        
+        /* ra */
+        .card39 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ri */
+        .card40 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ru */
+        .card41 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* re */
+        .card42 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* ro */
+        .card43 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* wa */
+        .card44 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 25px 35px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* wo */
+        .card45 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+
+        /* n */
+        .card46 {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          width: 220px;
+          margin: 20px 15px;
+          text-align: center;
+          font-family: arial;
+          display: inline-block;
+        }
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+        
+        .title {
+          color: grey;
+          font-size: 18px;
+        }
+        
+        a {
+          text-decoration: none;
+          font-size: 22px;
+          color: black;
+        }
+        
+        button:hover, a:hover {
+          opacity: 0.7;
+        }
+
+        footer{
+            position: relative;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgb(255, 96, 194);
+            height: 70px;
+            width: 200;
+            font-family: "open Sans";
+            padding-top: 15px;
+            color: #fff;
+        }
+
+        .footer-bottom{
+            text-align: center;
+        }
+
+        .footer-bottom p{
+            font-size: 14px;
+            word-spacing: 2px;
+            text-transform: capitalize;
+        }
+
+        .footer-bottom span{
+            text-transform: uppercase;
+            color: black;
+        }
+
+@media only screen and (min-width: 48.75cm) {
+  .columns {width: 39.0625%;}
+  .container {width: 7.03125%}
+  .card .card2 .card3 .card4 .card5 .card6 .card7 .card8 .card9 .card10 .card11 .card12 .card13 .card14 .card15
+  .card16 .card17 .card18 .card19 .card20 .card21 .card22 .card23 .card24 .card25 .card26 .card27 .card28 .card29 
+  .card30 .card31 .card32 .card33 .card34 .card35 .card36 .card37 .card38 .card39 .card40 .card41 .card42 .card43
+  .card44 .card45 .card46
+  {width: 17.1875%;}
+}
+    </style> 
+</head>
+<body>
+    <div class="columns">
+        <ul class="price">
+          <li class="header">ひらがな</li>
+          <li class="grey"><strong>Hiraganaひらがな</strong> have 46 alphabet</li>
+          <li>click at <strong>"CLICK ME"</strong> to look step to write each alphabet</li>
+        </ul>
+      </div>
+    <div class="container">
+        <div class="menu">
+            <ul>
+                    <li class="active" style="background-color:#ffffff;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="home.html"><strong>home</strong></a></li>
+                    <li style="background-color:#0dcaf0;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="hira.html">
+                        ひらがな</a></li>
+                    <li style="background-color:#20db9d;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="kata.html">カタカナ</a></li>
+                    <li style="background-color:#F7CB1B;color:rgb(255, 207, 740);border-radius:5px;">
+                        <a class="btn btn-primary" href="pra.html">practice</a></li>
+                </ul>
+        </div>
+    </div>
+      <br>
+      <!-- a -->
+                <div class="card">
+                  <img src="hira/1a.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/1.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- i -->          
+                <div class="card2">
+                  <img src="hira/2i.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/2.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- u -->          
+                <div class="card3">
+                  <img src="hira/3u.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/3.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- e -->        
+                <div class="card4">
+                  <img src="hira/4e.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/4.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- o -->      
+                <div class="card5">
+                  <img src="hira/5o.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/5.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ka -->     
+                <div class="card6">
+                  <img src="hira/6ka.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/6.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ki -->
+                <div class="card7">
+                  <img src="hira/7ki.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/7.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ku -->
+                <div class="card8">
+                  <img src="hira/8ku.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/8.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ke -->
+                <div class="card9">
+                  <img src="hira/9ke.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/9.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- ko -->
+                <div class="card10">
+                  <img src="hira/10ko.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/10.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- sa -->
+                <div class="card11">
+                  <img src="hira/11sa.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/11.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- shi -->
+                <div class="card12">
+                  <img src="hira/12shi.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/12.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- su -->
+                <div class="card13">
+                  <img src="hira/13su.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/13.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- se -->
+                <div class="card14">
+                  <img src="hira/14se.jpeg" width="153px" height="153px">
+                  <a class="btn btn-primary" href="hiraw/14.html" float="center">
+                    <button style="border: none;
+                    outline: 0;
+                    display: inline-block;
+                    padding: 8px;
+                    color: white;
+                    background-color: #0d6efd;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;">click me</button>
+                </a>
+                </div>
+      <!-- so -->
+      <div class="card15">
+        <img src="hira/15so.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/15.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+       <!-- ta -->
+       <div class="card16">
+        <img src="hira/16ta.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/16.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- chi -->
+      <div class="card17">
+        <img src="hira/17chi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/17.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- tsu -->
+      <div class="card18">
+        <img src="hira/18tsu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/18.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- te -->
+      <div class="card19">
+        <img src="hira/19te.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/19.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- to -->
+      <div class="card20">
+        <img src="hira/20to.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/20.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- na -->
+      <div class="card21">
+        <img src="hira/21na.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/21.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ni -->     
+      <div class="card22">
+        <img src="hira/22ni.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/22.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- nu -->
+      <div class="card23">
+        <img src="hira/23nu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/23.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- ne -->
+      <div class="card24">
+        <img src="hira/24ne.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/24.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- no -->
+      <div class="card25">
+        <img src="hira/25no.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/25.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ha -->
+      <div class="card26">
+        <img src="hira/26ha.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/26.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- hi -->
+      <div class="card27">
+        <img src="hira/27hi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/27.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- hu -->
+      <div class="card28">
+        <img src="hira/28hu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/28.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- he -->
+      <div class="card29">
+        <img src="hira/29he.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/29.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ho -->
+      <div class="card30">
+        <img src="hira/30ho.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/30.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ma -->
+      <div class="card31">
+        <img src="hira/31ma.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/31.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- mi -->     
+      <div class="card32">
+        <img src="hira/32mi.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/32.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- mu -->
+      <div class="card33">
+        <img src="hira/33mu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/33.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- me -->
+      <div class="card34">
+        <img src="hira/34me.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/34.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- mo -->
+      <div class="card35">
+        <img src="hira/35mo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/35.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ya -->
+      <div class="card36">
+        <img src="hira/36ya.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/36.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- yu -->
+      <div class="card37">
+        <img src="hira/37yu.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/37.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- yo -->
+      <div class="card38">
+        <img src="hira/38yo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/38.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<br>
+      <!-- ra -->
+      <div class="card39">
+        <img src="hira/39ra.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/39.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ri -->
+      <div class="card40">
+        <img src="hira/40ri.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/40.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- ru -->
+      <div class="card41">
+        <img src="hira/41ru.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/41.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- re -->     
+      <div class="card42">
+        <img src="hira/42re.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/42.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- ro -->
+      <div class="card43">
+        <img src="hira/43ro.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/43.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<br>
+      <!-- wa -->
+      <div class="card44">
+        <img src="hira/44wa.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/44.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+<!-- wo -->
+      <div class="card45">
+        <img src="hira/45wo.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/45.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <!-- n -->
+      <div class="card46">
+        <img src="hira/46n.jpeg" width="153px" height="153px">
+        <a class="btn btn-primary" href="hiraw/46.html" float="center">
+          <button style="border: none;
+          outline: 0;
+          display: inline-block;
+          padding: 8px;
+          color: white;
+                    background-color: #0d6efd;
+          text-align: center;
+          cursor: pointer;
+          width: 100%;
+          font-size: 18px;">click me</button>
+      </a>
+      </div>
+
+      <footer>
+        <div class="footer-bottom">
+            <p>Copyright © 2022 <span>Ribbin-Wiya & 仔仔-Kritta</span> 
+              <br>All rights reserved </p>
+        </div>
+    </footer>
+
+</body>
+</html>
